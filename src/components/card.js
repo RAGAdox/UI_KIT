@@ -7,10 +7,10 @@ const CardWithDescription = () => {
     setCount(count + 1);
   };
   return (
-    <div className="bg-gray-50 m-8 rounded-xl shadow-lg ">
+    <div className="bg-gray-50 m-8 rounded-xl shadow-lg sm:max-w-xs mx-auto">
       <img
-        src={rishi}
-        className="rounded-t-lg object-cover object-center w-full h-56"
+        src={vas}
+        className="rounded-t-lg object-cover object-center w-full h-56 "
       />
       <div className="px-2 py-1">
         <h1 className="text-center text-2xl font-bold text-gray-800 mt-3">
