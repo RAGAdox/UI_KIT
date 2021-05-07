@@ -3,7 +3,7 @@ import React from "react";
 import CardWithDescription from "./components/card";
 function App() {
   return (
-    <div className="w-full sm:grid sm:grid-flow-row sm:grid-cols-2 lg:grid-cols-1 2xl:grid-cols-2  px-8 2xl:bg-red-400">
+    <div className="w-full sm:grid sm:grid-flow-row sm:grid-cols-2 lg:grid-cols-1 2xl:grid-cols-2  px-8 ">
       <div className="m-3">
         <CardWithDescription
           imageSrc="https://images.unsplash.com/photo-1620316398062-b860cd7c20c4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
@@ -36,6 +36,9 @@ function App() {
           description={`Download free,\nbeautiful high-quality\nphotos curated by Marlon.`}
           price="499 USD"
         ></CardWithDescription>
+      </div>
+      <div className="m-3">
+        <CardWithDescription></CardWithDescription>
       </div>
     </div>
   );
