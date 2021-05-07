@@ -1,18 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import React from "react";
+import Workcation from "./components/Workcation";
+import CardWithDescription from "./components/card";
 function App() {
   return (
-    <div className="App">
-      <div class="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4">
-        <div class="flex-shrink-0">
-          <img class="h-12 w-12" src={logo} alt="ChitChat Logo" />
-        </div>
-        <div>
-          <div class="text-xl font-medium text-black">ChitChat</div>
-          <p class="text-gray-500">You have a new message!</p>
-        </div>
-      </div>
+    <div className="grid md:grid-flow-row md:grid-cols-2 sm:bg-red-300 md:bg-yellow-100 lg:bg-green-100 xl:bg-blue-100 2xl:bg-purple-400 bg-black">
+      <CardWithDescription></CardWithDescription>
+      <CardWithDescription></CardWithDescription>
+      <CardWithDescription></CardWithDescription>
     </div>
   );
 }
