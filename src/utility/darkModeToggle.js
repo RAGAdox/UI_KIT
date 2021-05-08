@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 const ToggleButton = () => {
   const [darkMode, setDarkMode] = useState(
-    window.localStorage.getItem("theme") === "dark"
+    window.matchMedia("(prefers-color-scheme: dark)").matches ||
+      window.localStorage.getItem("theme") === "dark"
   );
   useEffect(() => {
     console.log("darkMode", darkMode);
@@ -22,7 +23,7 @@ const ToggleButton = () => {
     setDarkMode(!darkMode);
   };
   return (
-    <div className="dark:bg-gray-800 flex items-center justify-center w-full mb-12 shadow-lg rounded-full pr-2">
+    <div className="dark:bg-gray-800 bg-gray-200 flex items-center justify-center w-full mb-12 shadow-lg rounded-full pr-2">
       <label htmlFor="toggleB" className="flex items-center cursor-pointer">
         <div className="relative">
           <input
