@@ -2,19 +2,20 @@ import React, { useState } from "react";
 import logo from "../logo.svg";
 const Navbar = () => {
   const [navVisible, setNavVisible] = useState(false);
-  const showMenu = () => {
+  const toggleMenu = () => {
     console.log("Opening NavBar in Small devices");
     setNavVisible(!navVisible);
   };
   return (
     <div className="bg-gray-800 text-gray-300 flex flex-col sm:flex-row justify-between text-2xl py-1 sticky top-0 z-50">
-      <div className="flex flex-row justify-between px-6 ">
-        <a href="#" className="flex flex-row items-center h-full ">
+      <div className="flex flex-row justify-between px-6 shadow-sm">
+        <a href="/" className="flex flex-row items-center h-full ">
           <img src={logo} className=""></img>
           Rishi
         </a>
-        <span className="flex self-center sm:hidden" onClick={showMenu}>
-          <i className="fas fa-bars"></i>
+        <span className="flex self-center sm:hidden" onClick={toggleMenu}>
+          <i className={`fas fa-bars ${navVisible ? "hidden" : "inline"}`}></i>
+          <i class={`fa fa-times ${!navVisible ? "hidden" : "inline"}`}></i>
         </span>
       </div>
       <div
@@ -23,6 +24,7 @@ const Navbar = () => {
         }`}
       >
         <a
+          href="/"
           className={`flex px-6  h-full content-center items-center hover:bg-gray-900 ${
             !navVisible ? "mx-1" : ""
           }`}
@@ -30,6 +32,7 @@ const Navbar = () => {
           Home
         </a>
         <a
+          href="/"
           className={`flex px-6  h-full content-center items-center hover:bg-gray-900 ${
             !navVisible ? "mx-1" : ""
           }`}
@@ -37,6 +40,7 @@ const Navbar = () => {
           About
         </a>
         <a
+          href="/"
           className={`flex px-6  h-full content-center items-center hover:bg-gray-900 ${
             !navVisible ? "mx-1" : ""
           }`}
@@ -44,6 +48,7 @@ const Navbar = () => {
           Links
         </a>
         <a
+          href="/"
           className={`flex px-6  h-full content-center items-center hover:bg-gray-900 ${
             !navVisible ? "mx-1" : ""
           }`}
